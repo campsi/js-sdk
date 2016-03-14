@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Campsi.io Example</title>
+</head>
+<body>
+<h1>Demo</h1>
+<script type="text/x-handlebars-template+campsi" data-project="campsi" data-collection="example">
+    <h2>Articles</h2>
+    {{#each entries}}
+    <article>
+        <h1>{{ data.title }}</h1>
+        <img src="{{ data.image.uri }}?w=400">
+        <div class="content">{{ data.content }}</div>
+    </article>
+    {{/each}}
+</script>
+<script src="../../dist/campsi-sdk.js"></script>
+</body>
+</html>

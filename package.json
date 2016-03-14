@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/campsi/js-sdk#readme",
   "dependencies": {
+    "dataset": "^0.3.1",
     "handlebars": "^4.0.5"
   },
   "devDependencies": {

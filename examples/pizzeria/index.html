@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Radhuni Restaurant HTML5 Template | Home Page Style Two</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+<!--Page Wrapper-->
+<div class="page-wrapper">
+
+    <!--Preloader Box-->
+    <div class="preloader"></div>
+
+    <!--Main-Header-->
+    <header class="main-header header-style-two">
+        <div class="auto-container">
+            <div class="header-inner">
+
+                <div class="logo"><a href="#"><img src="images/logo-1.png" alt=""></a></div>
+                <nav id="nav-menu">
+                    <div class="navbar-header">
+                        <!-- Toggle Button -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Main Navigation -->
+                    <div class="navbar-collapse collapse clearfix">
+                        <div class="left-nav">
+                            <ul>
+                                <li><a href="#main-slider">Home</a></li>
+                                <li><a href="#our-services">Service</a></li>
+                                <li><a href="#our-menu">Menu</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-nav">
+                            <ul>
+                                <li><a href="#make-reservation">Booking</a></li>
+                                <li class="dropdown"><a href="#our-blog">Blog</a>
+                                    <ul>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="blog-single.html">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#main-footer">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </nav>
+
+
+            </div>
+        </div>
+    </header>
+
+    <!--Main Slider-->
+    <section id="main-slider" class="main-slider">
+
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+                    <script type="text/x-handlebars-template+campsi" data-project="campsi-demo-pizzeria"
+                            data-collection="banner">
+                        {{#each entries}}
+
+                        <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"
+                            data-thumb="{{ data.image.uri }}" data-saveperformance="on"
+                            data-title="We Serve Quality"> <!-- MAIN IMAGE -->
+                            <img src="{{ data.image.uri}}" alt="" data-bgposition="center center" data-bgfit="cover"
+                                 data-bgrepeat="no-repeat">
+
+                            <div class="tp-caption white_heavy_42 lfb tp-resizeme"
+                                 data-x="center" data-hoffset="-0"
+                                 data-y="center" data-voffset="-50"
+                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                 data-speed="2000"
+                                 data-start="500"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.1"
+                                 data-endelementdelay="0.1"
+                                 data-endspeed="1000"
+                                 data-endeasing="Power4.easeInOut"
+                                 style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><h1>
+                                {{data.title}}</h1></div>
+
+
+                            <div class="tp-caption white_heavy_42 lfb tp-resizeme slide-text"
+                                 data-x="center" data-hoffset="-0"
+                                 data-y="center" data-voffset="70"
+                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                 data-speed="2000"
+                                 data-start="1000"
+                                 data-easing="easeOutExpo"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.1"
+                                 data-endelementdelay="0.1"
+                                 data-endspeed="1000"
+                                 data-endeasing="Power4.easeInOut"
+                                 style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                {{data.caption}}
+                            </div>
+
+                            <div class="tp-caption white_heavy_42 lfb tp-resizeme"
+                                 data-x="center" data-hoffset="-0"
+                                 data-y="center" data-voffset="160"
+                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                 data-speed="2000"
+                                 data-start="1200"
+                                 data-easing="Power4.easeInOut"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-elementdelay="0.1"
+                                 data-endelementdelay="0.1"
+                                 data-endspeed="1000"
+                                 data-endeasing="Power4.easeInOut"
+                                 style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a
+                                    class="full-btn" href="{{data.linkHref}}">{{data.linkText}}</a></div>
+
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+                <div class="tp-bannertimer"></div>
+            </div>
+        </div>
+    </section>
+    <!--Main Slider Ends-->
+
+    <!--About US-->
+    <section class="about-us" id="about-us">
+        <div class="auto-container clearfix">
+            <script type="text/x-handlebars-template+campsi" data-collection="about-us"
+                    data-project="campsi-demo-pizzeria">
+                <div class="col-md-6 col-sm-6 col-xs-12 left-image">
+                    <div class="rotate-image anim-7-all wow zoomIn" data-wow-delay="0" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <img class="one" src="{{entries.0.data.photoback.uri}}" alt="">
+                        <img class="two" src="{{entries.0.data.photo.uri}}?w=370&h=350&fit=crop" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 text-content">
+                    <div class="sec-title wow fadeInUp" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <h2>about us</h2>
+                        <h1>{{entries.0.data.title}}</h1>
+                    </div>
+                    <div class="sec-text wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <p>{{entries.0.data.content}}</p>
+                    </div>
+
+                    <a class="theme-btn" href="#">Read More &ensp; <span class="icon fa fa-angle-right"></span></a>
+                </div>
+            </script>
+        </div>
+    </section>
+
+
+    <!--Special Recipes Style Two-->
+    <section class="special-recipes style-two" id="special-recipes">
+        <div class="auto-container clearfix">
+
+            <div class="sec-title wow fadeInUp" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                <h2>Special Recipes</h2>
+                <h1>Taste of Precious</h1>
+            </div>
+            <div class="sec-text wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.5s" data-wow-offset="5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been
+                    the industry's stan</p>
+            </div>
+
+            <!--Recipes Box-->
+            <div class="recipes-box">
+                <script type="text/x-handlebars-template+campsi" data-project="campsi-demo-pizzeria"
+                        data-collection="recipes">
+                    {{#each entries}}
+                    <article class="recipe wow fadeIn" data-wow-delay="0" data-wow-duration="1s" data-wow-offset="5">
+                        <!--Image-->
+                        <figure class="image">
+                            <img src="{{ data.image.uri }}?w=370&h=350&fit=crop" alt="Recipe" title="">
+                            <div class="overlay">
+                                <div class="content">
+                                    <a href="#" class="link"><span class="icon flaticon-knife52"></span></a>
+                                </div>
+                            </div>
+                        </figure>
+                        <!--Text Content-->
+                        <div class="text-content">
+                            <div class="icon"><span class="flaticon-recepcionist"></span></div>
+                            <h4 class="rec-title">{{ data.name }}</h4>
+                            <div class="rating"><span class="flaticon-star138"></span> <span
+                                    class="flaticon-star138"></span> <span class="flaticon-star138"></span> <span
+                                    class="flaticon-star138"></span> <span class="flaticon-stars56"></span></div>
+                            <div class="short-desc">{{ data.description }}
+                            </div>
+                            <div class="price">$ {{ data.price }}</div>
+                        </div>
+                    </article>
+                    {{/each}}
+                    <div class="clearfix"></div>
+                </script>
+            </div>
+            <!--Recipes Box End-->
+
+        </div>
+    </section>
+
+
+    <!--Our Services-->
+    <section class="our-services" id="our-services">
+        <div class="auto-container clearfix">
+
+            <div class="sec-title wow fadeInUp" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                <h2>Our Services</h2>
+                <h1>What We Offer</h1>
+            </div>
+            <div class="sec-text wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.5s" data-wow-offset="5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been
+                    the industry's stan</p>
+            </div>
+
+            <!--Box Container-->
+            <div class="box-container clearfix">
+
+                <script type="text/x-handlebars-template+campsi" data-project="campsi-demo-pizzeria"
+                        data-collection="services">
+                    {{#each entries}}
+                    <article class="col-md-3 col-sm-6 col-xs-12 anim-7-all box wow fadeInLeft" data-wow-delay="0"
+                             data-wow-duration="1.5s" data-wow-offset="5">
+                        <figure class="image"><img class="img-circle" src="{{ data.image.uri }}?w=230&h=230&fit=crop"
+                                                   alt=""><a
+                                href="{{ data.image.uri }}?w=230&h=230&fit=crop" class="zoom" data-rel="prettyPhoto"
+                                title="{{ data.title }}"></a></figure>
+
+                        <div class="text-content">
+                            <h3 class="title">{{ data.title}}</h3>
+                            <div class="text">{{ data.description }}
+                            </div>
+                        </div>
+                    </article>
+                    {{/each}}
+                </script>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--Our Menu-->
+    <section class="our-menu" id="our-menu">
+        <div class="auto-container clearfix">
+
+            <div class="sec-title wow fadeInUp" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                <h2>Food Item</h2>
+                <h1>Our Menu</h1>
+            </div>
+            <div class="sec-text wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.5s" data-wow-offset="5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been
+                    the industry's stan</p>
+            </div>
+
+            <!--Floated Images-->
+            <div class="image-right-top"><img src="images/background/image-1.png" alt=""></div>
+            <div class="image-left-bottom"><img src="images/background/image-2.png" alt=""></div>
+
+            <!--Column Container-->
+            <div class="col-container anim-5-all clearfix">
+
+                <!--Column-->
+                <div class="col-md-4 col-sm-6 col-xs-12 col">
+                    <!--Block-->
+                    <div class="menu-block wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <div class="title-icon"><span class="icon img-circle flaticon-lunch9"></span></div>
+                        <div class="title"><h3>&minus; Breakfast &minus;</h3></div>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                    </div>
+                </div>
+
+                <!--Column-->
+                <div class="col-md-4 col-sm-6 col-xs-12 col">
+                    <!--Menu Block-->
+                    <div class="menu-block wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <div class="title-icon"><span class="icon img-circle flaticon-hamburger"></span></div>
+                        <div class="title"><h3>&minus; Lunch &minus;</h3></div>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                    </div>
+
+                    <!--Menu Block-->
+                    <div class="menu-block wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <div class="title-icon"><span class="icon img-circle flaticon-fast-food10"></span></div>
+                        <div class="title"><h3>&minus; Drinks &minus;</h3></div>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                    </div>
+
+                </div>
+
+                <!--Column-->
+                <div class="col-md-4 col-sm-12 col-xs-12 col">
+                    <!--Block-->
+                    <div class="menu-block wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <div class="title-icon"><span class="icon img-circle flaticon-chicken3"></span></div>
+                        <div class="title"><h3>&minus; Dinner &minus;</h3></div>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy.</p>
+                        <h5>$5.66</h5>
+
+                    </div>
+
+                    <!--Block-->
+                    <div class="menu-block wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                        <div class="title-icon"><span class="icon img-circle flaticon-coffeeshop11"></span></div>
+                        <div class="title"><h3>&minus; Soup &minus;</h3></div>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <p>Lorem Ipsum is simply dummy text.</p>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                        <h4>Here will be food name</h4>
+                        <h5>$5.66</h5>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+            <div class="center wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5"><a href="#"
+                                                                                                              class="theme-btn"> &ensp;
+                Full Menu &ensp; <span class="icon fa fa-angle-right"></span></a></div>
+
+        </div>
+    </section>
+
+
+    <!--Our Team-->
+    <section class="our-team" id="our-team">
+        <div class="auto-container clearfix">
+
+            <div class="sec-title wow fadeInUp" data-wow-delay="0" data-wow-duration="1.5s" data-wow-offset="5">
+                <h2>Our Team</h2>
+                <h1>Meet Our Staff</h1>
+            </div>
+            <div class="sec-text wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.5s" data-wow-offset="5">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been
+                    the industry's stan</p>
+            </div>
+
+            <!--Box Container-->
+            <div class="box-container clearfix">
+
+                <script type="text/x-handlebars-template+campsi" data-project="campsi-demo-pizzeria"
+                        data-collection="staff">
+                    {{#each entries}}
+                    <article class="col-md-3 col-sm-6 col-xs-12 anim-7-all member"
+                             data-wow-delay="0"
+                             data-wow-duration="1.5s"
+                             data-wow-offset="5">
+
+                        <figure class="image">
+                            <img src="{{ data.image.uri}}?h=280&w=224&fit=facearea&facepad=1.5" alt={{data.name}}>
+                            <a href="#" class="icon">
+                                <span class="flaticon-chef31"></span>
+                            </a>
+                        </figure>
+
+                        <div class="text-content">
+                            <h3 class="name">{{data.name}}</h3>
+                            <h4 class="title">{{data.title}}</h4>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="icon flaticon-facebook2"></a>
+                            <a href="#" class="icon flaticon-twitter"></a>
+                            <a href="#" class="icon flaticon-logotype16"></a>
+                            <a href="#" class="icon flaticon-pinterest16"></a>
+                        </div>
+                    </article>
+                    {{/each}}
+                </script>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--Main Footer-->
+    <footer class="main-footer" id="main-footer">
+        <div class="auto-container">
+
+            <!--Newsletter-->
+            <div class="newsletter anim-7-all">
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2>Subcribe To our News Latter now!!</h2>
+                        <h3>Some lorem ipsum subtitle here</h3>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form">
+                            <form method="post" action="index.html">
+                                <div class="form-group">
+                                    <input type="email" name="email" value="" placeholder="Enter you email address"
+                                           required>
+                                    <button type="submit"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--Newsletter End-->
+
+            <!--Middle-->
+            <div class="middle anim-7-all clearfix">
+
+                <!--Column-->
+                <div class="col">
+                    <!--About-->
+                    <div class="widget about wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <h3>ABOUT US</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has
+                            been the</p>
+                        <br>
+
+                        <ul class="info">
+                            <li><span class="icon flaticon-pin56"></span> &ensp; 60 Grant Ave. Carteret NJ 0708</li>
+                            <li><span class="icon fa fa-phone"></span> &ensp; (732) 803-01 03, (732) 806-01 04</li>
+                            <li><span class="icon flaticon-email15"></span> &ensp; info@companyname.com</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <!--Business Hours-->
+                    <div class="widget business-hours wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <h3>OPENING HOURS</h3>
+
+                        <ul>
+                            <li class="clearfix"><span class="pull-left">Monday - Friday </span> <span
+                                    class="pull-right">9am - 10pm</span></li>
+                            <li class="clearfix"><span class="pull-left">Sunday </span> <span class="pull-right">10am - 7pm</span>
+                            </li>
+                            <li class="clearfix"><span class="pull-left">Saturday </span> <span class="pull-right">10pm - 4am</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!--Column-->
+                <div class="col">
+                    <!--Twitter Feeds-->
+                    <div class="widget twitter-feeds wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <h3>Twitter Feeds</h3>
+
+                        <div class="feed">
+                            <span class="icon flaticon-twitter43 img-circle"></span>
+                            <p>Very lovely design ever I have seen. <a href="#">http://themeforest.net/</a></p>
+                            <span class="date">July 2, 2014</span>
+                        </div>
+
+                        <div class="feed">
+                            <span class="icon flaticon-twitter43 img-circle"></span>
+                            <p>Very lovely design ever I have seen. <a href="#">http://themeforest.net/</a></p>
+                            <span class="date">July 2, 2014</span>
+                        </div>
+
+                        <div class="feed">
+                            <span class="icon flaticon-twitter43 img-circle"></span>
+                            <p>Very lovely design ever I have seen. <a href="#">http://themeforest.net/</a></p>
+                            <span class="date">July 2, 2014</span>
+                        </div>
+
+                        <div class="feed">
+                            <span class="icon flaticon-twitter43 img-circle"></span>
+                            <p>Very lovely design ever I have seen. <a href="#">http://themeforest.net/</a></p>
+                            <span class="date">July 2, 2014</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Column-->
+                <div class="col last">
+                    <!--Contact Form-->
+                    <div class="widget contact-form wow fadeIn" data-wow-delay="1s" data-wow-duration="1.5s"
+                         data-wow-offset="5">
+                        <h3>Contact Form</h3>
+
+                        <div class="form">
+                            <form id="contact-form" method="post" action="index.html">
+                                <div class="form-group">
+                                    <input type="text" name="name" value="" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" value="" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+
+                                <button type="submit" class="full-btn">Send</button>
+
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--Middle End-->
+
+            <!--Bottom-->
+            <div class="bottom anim-7-all clearfix">
+                <!--Bottom-->
+                <div class="copyright wow fadeInLeft" data-wow-delay="0" data-wow-duration="1.5s"
+                     data-wow-offset="5"> &copy; copyright 2015 Radhuni Inc
+                </div>
+                <!--Social-->
+                <div class="social">
+                    <a href="#" class="fa fa-facebook-f wow fadeInRight" data-wow-delay="0" data-wow-duration="1.5s"
+                       data-wow-offset="5"></a>
+                    <a href="#" class="fa fa-twitter wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="1.5s"
+                       data-wow-offset="5"></a>
+                    <a href="#" class="fa fa-google-plus wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1.5s"
+                       data-wow-offset="5"></a>
+                    <a href="#" class="fa fa-pinterest-p wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="1.5s"
+                       data-wow-offset="5"></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!--Footer End-->
+
+    <!--Scroll to top-->
+    <div class="go-to-top img-circle anim-3 fa fa-angle-up"></div>
+
+</div>
+<!--End pagewrapper-->
+<script src="../../dist/campsi-sdk.js" async></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/revolution.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

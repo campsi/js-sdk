@@ -1,0 +1,349 @@
+@media only screen and (min-width: 1440px){
+	
+	.our-menu .image-right-top{
+		display:block;
+	}
+	
+	.our-menu .image-left-bottom{
+		display:block;
+	}
+	
+	.make-reservation .image-right-top{
+		display:block;	
+	}
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1390px){
+	
+	.our-menu .image-right-top{
+		display:block;
+		right:-320px;
+	}
+	
+	.our-menu .image-left-bottom{
+		display:block;
+		left:-100px;
+	}
+	
+	.make-reservation .image-right-top{
+		display:block;
+		right:-100px;	
+	}
+
+}
+
+@media only screen and (max-width: 1140px) {
+	.our-team .box-container,
+	.our-services .box-container,
+	.our-blog .blog-container,
+	.main-footer .middle{
+		margin-left:0px;
+		margin-right:0px;	
+	}
+	
+	.special-recipes::before{
+		display:none;	
+	}
+	
+	.header-style-two .auto-container{
+		padding:0px;	
+	}
+	
+	.header-style-two .header-inner{
+		padding:5px 0px;	
+	}
+	
+	#nav-menu ul li a{
+		text-transform:capitalize;	
+	}
+	
+	.main-footer .middle .col{
+		padding:0px 20px;	
+	}
+}
+
+
+@media only screen and (max-width: 1023px) {
+	#nav-menu{
+		padding:10px 0px;
+		text-align:center;
+	}
+	
+	#nav-menu ul li{
+		float:none;
+		width:auto;
+		display:inline-block;
+		padding:0px 10px;	
+	}
+	
+	.header-style-two .logo img{
+		max-width:220px;	
+	}
+	
+	.special-recipes .recipes-box .recipe{
+		width:50%;	
+	}
+	
+	.our-services .box-container .box{
+		margin-bottom:40px;	
+	}
+	
+	.make-reservation .form{
+		border-left:none;
+		padding:0px;	
+	}
+	
+	.our-blog .blog-container .blog-post{
+		padding:0px 10px;	
+	}
+	
+	.main-footer .middle .col{
+		width:50%;
+		padding:0px 30px;
+		margin-bottom:40px;	
+	}
+	
+	.main-footer .middle .last{
+		width:100%;	
+	}
+
+}
+
+@media only screen and (max-width: 767px) {	
+	.comment-details {
+		margin-left:0px; 
+		padding-top:100px;
+	}
+	.comments:before {
+		display:none;
+	}
+	section#blog, section.single.blog {
+		padding-top:120px !important;
+	}
+	.title-head { 
+		font-size:24px;
+	}
+	.author img { 
+		position:static; 
+		display:block; 
+		margin:0 auto; 
+		padding-top:40px;
+	}
+	.author-comment { 
+		margin-left:0px;
+		padding-top:30px; 
+		float:none;
+	 }
+	.comment-area input[type="text"], 
+	.comment-area input[type="phone"], 
+	.comment-area textarea, 
+	.comment-area input[type="email"]{ 
+		width:100%;
+	}
+	.blog form { 
+		padding-left:10px; 
+		padding-right:10px;
+	}
+	.blog .post-content { 
+		padding:25px 25px;
+	}
+	
+	.main-footer .middle .col{
+		width:100%;
+		padding:0px 10px;
+	}
+	
+	.dish-of-week .inner-wrap .left-side{
+		position:relative;
+		width:100%;
+		float:none;
+	}
+	
+	.dish-of-week .inner-wrap .right-side{
+		position:relative;
+		width:100%;
+		float:none;
+		height:auto;
+		background-image:none !important;
+	}
+	
+	.dish-of-week .inner-wrap .right-side .img{
+		display:block;
+	}
+	
+	.tp-bullets{
+		display:none !important;	
+	}
+	
+	.our-menu .col .menu-block:first-child{
+		margin-top:0px;	
+	}
+	
+	.main-footer .newsletter h3{
+	margin-bottom:40px;	
+	}
+	
+	.header-style-one .button-container{
+		margin-top:20px;	
+	}
+	
+	.header-style-two .logo{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:50%;
+		text-align:left;
+		height:auto;
+	}
+	
+	.header-style-two .logo img{
+		padding:12px 20px;
+		border:none;
+		width:180px;	
+	}
+	
+	.header-style-two .navbar-header .navbar-toggle{
+		position:relative;
+		border-color:#ef4836;	
+	}
+	
+	.header-style-two .navbar-header .navbar-toggle .icon-bar{
+		background:#ef4836;	
+	}
+	
+	#nav-menu .collapse,
+	#nav-menu .collapse.in,
+	#nav-menu .collapsing{
+		max-height:none;
+		overflow:hidden;
+		padding:0px;
+		margin:0px;
+		border:1px solid #ef4836;
+		margin:20px 15px;	
+	}
+	
+	#nav-menu .left-nav,
+	#nav-menu .right-nav{
+		position:relative;
+		float:none;
+		width:100%;
+		padding:0px;
+		margin:0px;	
+	}
+	
+	#nav-menu .collapse{	
+	}
+	
+	#nav-menu ul li{
+		float:none;
+		width:100%;
+		height:auto;
+		border-bottom:1px solid #ef4836;
+		padding:0px;	
+	}
+	
+	#nav-menu .right-nav ul > li:last-child{
+		border:none;
+	}
+	
+	#nav-menu ul li ul{
+		position:relative;
+		left:0px;
+		top:0px;
+		width:100%;
+		padding:0px;
+		border:none;
+		border-top:1px solid #ef4836;
+		z-index:100;
+		background:#ffffff;
+		visibility:visible;
+		opacity:1;
+		border-radius:0px;
+		-ms-border-radius:0px;
+		-webkit-border-radius:0px;
+		-moz-border-radius:0px;
+		-o-border-radius:0px;	
+	}
+	
+	#nav-menu ul li ul li{
+		border-color:#ef4836;	
+	}
+	
+	#nav-menu ul li ul li a{
+		font-weight:700;
+		padding:10px 10px;	
+	}
+	
+	#nav-menu ul li:hover > ul {
+		top:0px;
+		opacity:1;
+		visibility:visible;	
+	}
+	
+	.blog .col-md-8{
+		padding-right:15px;	
+	}
+
+}
+
+
+
+@media only screen and (max-width: 599px) {
+	.main-slider{
+		padding-top:50px;	
+	}
+	
+	.special-recipes .recipes-box .recipe{
+		width:100%;	
+	}
+	
+	.about-us .text-content,
+	.about-us .left-image{
+		position:relative;
+		padding:30px 10px;	
+	}
+	
+	.header-style-one .menu-box{
+		padding:40px 15px;
+		width:260px;	
+	}
+	
+	.go-to-top{
+		bottom:50px;	
+	}
+	
+	.dish-of-week .inner-wrap .title h2{
+		font-size:32px;	
+	}
+	
+	.main-footer .newsletter h2{
+		font-size:24px;	
+	}
+
+}
+
+
+
+@media only screen and (max-width: 479px) {
+	
+	.header-style-two .logo img{
+		width:130px;	
+	}
+	
+	#nav-menu{
+		padding:0px;	
+	}
+	
+	.main-footer .bottom .copyright{
+		float:none;
+		width:100%;
+		text-align:center;
+		margin-bottom:10px;	
+	}
+	.main-footer .bottom .social{
+		float:none;
+		width:100%;
+		text-align:center;	
+	}
+}
