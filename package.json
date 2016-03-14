@@ -1,6 +1,6 @@
 {
   "name": "campsi-js-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Javascript SDK for building dynamic websites with Campsi.io",
   "main": "index.js",
   "scripts": {
