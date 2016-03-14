@@ -1,0 +1,32 @@
+{
+  "name": "campsi-js-sdk",
+  "version": "1.0.0",
+  "description": "Simple Javascript SDK for building dynamic websites with Campsi.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campsi/js-sdk.git"
+  },
+  "author": "Romain Bessuges <romainbessuges@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/campsi/js-sdk/issues"
+  },
+  "homepage": "https://github.com/campsi/js-sdk#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
