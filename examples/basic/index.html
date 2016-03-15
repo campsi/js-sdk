@@ -5,8 +5,50 @@
     <title>Basic Campsi.io Example</title>
 </head>
 <body>
+<h1>Demo Delphine</h1>
+
+<div id="recettes">
+    <script type="text/x-handlebars-template+campsi" data-project="campsi-demo-pizzeria" data-collection="recipes" data-where='{"name": "Margarita"}'>
+        <h2>Recettes</h2>
+        <ul>
+            {{#each entries}}
+            <li>
+                <h3>{{data.name}}</h3>
+                <p>{{data.description}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+</div>
+
+
 <h1>Demo</h1>
-<script type="text/x-handlebars-template+campsi" data-project="campsi" data-collection="example">
+<form id="filter">
+    <div class="control">
+        <label for="keyword-select">Keyword</label>
+        <select name="keyword" id="keyword-select">
+            <option value="pizza" selected>Pizza</option>
+            <option value="computer">Computer</option>
+        </select>
+    </div>
+    <div class="control">
+        <label>Pagination (skip / limit)</label>
+        <input type="number" name="skip" value="0"> /
+        <input type="number" name="limit" value="1">
+    </div>
+    <div class="control">
+        <input type="submit">
+    </div>
+</form>
+
+<script type="text/x-handlebars-template+campsi"
+        id="articles"
+        data-project="campsi"
+        data-collection="example"
+        data-skip="0"
+        data-limit="1"
+        data-where='{"keyword": "pizza"}'
+        data-sort="date">
     <h2>Articles</h2>
     {{#each entries}}
     <article>
@@ -17,5 +59,18 @@
     {{/each}}
 </script>
 <script src="../../dist/campsi-sdk.js"></script>
+<script>
+
+    var template = document.getElementById('articles').template;
+
+    document.getElementById('filter').addEventListener('submit', function (e) {
+        template.query.where.keyword = this.keyword.value;
+        template.query.limit = this.limit.value;
+        template.query.skip = this.skip.value;
+        template.reload();
+        e.preventDefault();
+    });
+
+</script>
 </body>
 </html>
