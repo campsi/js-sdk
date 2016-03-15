@@ -14,6 +14,10 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <!--[if lt IE 9]>
     <script src="js/respond.js"></script><![endif]-->
+    <style>
+        section {padding-top: 100px}
+        #main-slider {padding-top: 0}
+    </style>
 </head>
 
 <body>
@@ -274,37 +278,37 @@
                 <!--Column-->
                 <script type="text/x-handlebars-template+campsi" data-collection="about-us"
                         data-project="campsi-demo-pizzeria">
-                <div class="col">
-                    <!--About-->
-                    {{#if entries.0.data}}
-                    <div class="widget about wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s"
-                         data-wow-offset="5">
-                        <h3>Coordonnées</h3>
+                    <div class="col">
+                        <!--About-->
+                        {{#if entries.0.data}}
+                        <div class="widget about wow fadeIn" data-wow-delay="0" data-wow-duration="1.5s"
+                             data-wow-offset="5">
+                            <h3>Coordonnées</h3>
+                            <br>
+                            <ul class="info">
+                                <li><span class="icon flaticon-pin56"></span> &ensp; {{ entries.0.data.address }}</li>
+                                <li><span class="icon fa fa-phone"></span> &ensp; {{ entries.0.data.tel }}</li>
+                                <li><span class="icon flaticon-email15"></span> &ensp; {{ entries.0.data.email }}</li>
+                            </ul>
+                        </div>
                         <br>
-                        <ul class="info">
-                            <li><span class="icon flaticon-pin56"></span> &ensp; {{ entries.0.data.address }}</li>
-                            <li><span class="icon fa fa-phone"></span> &ensp; {{ entries.0.data.tel }}</li>
-                            <li><span class="icon flaticon-email15"></span> &ensp; {{ entries.0.data.email }}</li>
-                        </ul>
-                    </div>
-                    <br>
-                    <!--Business Hours-->
-                    <div class="widget business-hours wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.5s"
-                         data-wow-offset="5">
-                        <h3>Horaires d'ouverture</h3>
+                        <!--Business Hours-->
+                        <div class="widget business-hours wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.5s"
+                             data-wow-offset="5">
+                            <h3>Horaires d'ouverture</h3>
 
-                        <ul>
-                            {{#each entries.0.data.opening_days}}
-                            <li class="clearfix">
-                                <span class="pull-left">{{day}}</span>
-                                <span class="pull-right">{{hours}}</span>
-                            </li>
-                            {{/each}}
-                        </ul>
+                            <ul>
+                                {{#each entries.0.data.opening_days}}
+                                <li class="clearfix">
+                                    <span class="pull-left">{{day}}</span>
+                                    <span class="pull-right">{{hours}}</span>
+                                </li>
+                                {{/each}}
+                            </ul>
 
+                        </div>
+                        {{/if}}
                     </div>
-                    {{/if}}
-                </div>
                 </script>
                 <!--Column-->
                 <div class="col">
