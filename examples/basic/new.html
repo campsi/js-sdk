@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+</head>
+<body>
+
+<script type="text/x-handlebars-template+campsi"
+        data-fallback="fallback.json"
+        data-limit="1"
+        data-sort="_id"
+        data-direction="desc"
+        data-url="http://localhost:3000/api/v1/projects/exaprint/collections/carrousel/entries">
+    <div class="carrousel">
+        <h2>carrousel</h2>
+        {{#each entries}}
+        <div class="entry">
+            <div class="link">{{data.link}}</div>
+            <div class="img"><img src="{{data.img.uri}}"/></div>
+            <div class="alt">{{ data.alt }}</div>
+            <div class="visibility">{{ data.visibility }}</div>
+            <div class="date-start">{{ data.date-start }}</div>
+            <div class="date-end">{{ data.date-end }}</div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script src="../../dist/campsi-sdk.js"></script>
+</body>
+</html>

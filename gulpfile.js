@@ -10,28 +10,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var streamify = require('gulp-streamify');
 
-
 var b = watchify(browserify({entries: ['./index.js'], debug: false}));
 
-// add transformations here
-// i.e. b.transform(coffeeify);
+gulp.task('default', ['bundle', 'compress']);
 
-gulp.task('js', bundle); // so you can run `gulp js` to build the file
-b.on('update', bundle); // on any dep update, runs the bundler
-b.on('log', gutil.log); // output build logs to terminal
-
-function bundle() {
+gulp.task('bundle', function bundle() {
     return b.bundle()
-        // log errors if they happen
-        .on('error', gutil.log.bind(gutil, 'Browserify Error'))
         .pipe(source('campsi-sdk.js'))
-        // optional, remove if you don't need to buffer file contents
         .pipe(buffer())
-        // optional, remove if you don't need to uglify
-        //.pipe(streamify(uglify()))
-        // optional, remove if you dont want sourcemaps
-        .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
-        // Add transformation tasks to the pipeline here.
-        .pipe(sourcemaps.write('./')) // writes .map file
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist'));
-}
+});
+
+gulp.task('compress', function compress() {
+    return b.bundle()
+        .pipe(source('campsi-sdk.min.js'))
+        .pipe(buffer())
+        .pipe(streamify(uglify()))
+        .pipe(gulp.dest('./dist'));
+});

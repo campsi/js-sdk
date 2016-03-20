@@ -11,17 +11,24 @@ var serialize = function (obj, prefix) {
 
 module.exports = function (url, params, callback) {
 
-    if(arguments.length === 3){
-        url+= '?' + serialize(params);
+    if (arguments.length === 3) {
+        url += '?' + serialize(params);
     } else {
         callback = params;
     }
 
     var xmlHTTP = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("MicrosoftXMLHTTP");
     xmlHTTP.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200)
-            callback(this.responseText);
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                callback(null, this.responseText);
+            } else {
+                callback(true);
+            }
+        }
     };
     xmlHTTP.open('GET', url, true);
     xmlHTTP.send();
+
+    return xmlHTTP;
 };
