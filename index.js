@@ -18,5 +18,4 @@
             window.campsiTemplates.push(new Template(scripts[i], templateReady));
         }
     }
-
 })();

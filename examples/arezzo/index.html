@@ -16,6 +16,7 @@
         </a>
         <a href="#services">Nos services</a>
         <a href="#nous-trouver">Nous trouver</a>
+        <div class="clear"></div>
     </nav>
 </header>
 <section id="carousel">
@@ -27,15 +28,14 @@
                 <div class="image" style="background-image: url({{ data.image.src }}?h=800)"></div>
                 <div class="content">
                     <h2 class="title">{{ data.title }}</h2>
-                    <p class="caption">{{ data.caption }}</p>
                     <div class="cta"><a href="{{ data.linkHref }}">{{ data.linkText }}</a></div>
                 </div>
             </div>
             {{/each}}
         </script>
         <nav>
-            <a href="#prev" class="arrow prev">Prev image</a>
-            <a href="#next" class="next">Next image</a>
+            <a href="#prev" class="arrow prev"></a>
+            <a href="#next" class="next"></a>
         </nav>
     </div>
 </section>
@@ -159,6 +159,12 @@
                 }
             });
         }
+
+        var $body = $('body');
+
+        $(window).on('scroll', function () {
+            $body.toggleClass('scroll', $(this).scrollTop() > 0);
+        });
     })();
 </script>
 </body>
