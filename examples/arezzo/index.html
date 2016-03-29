@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arezzo - Site de démo - Campsi.io JS SDK</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#carte">Notre carte</a>
+        <a href="#equipe">Notre équipe</a>
+        <a href="#carousel" class="logo">
+            <h1><img src="https://campsi.imgix.net/56261291c0e9425a0b9404d8-EJSKmdbTl.png?h=400&fit=max"
+                     alt="Arezzo Pizzeria"></h1>
+        </a>
+        <a href="#services">Nos services</a>
+        <a href="#nous-trouver">Nous trouver</a>
+    </nav>
+</header>
+<section id="carousel">
+    <div class="container">
+        <script type="text/x-handlebars-template+campsi"
+                data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/banner/entries">
+            {{#each entries}}
+            <div class="slide {{#if @first}}active{{else}}next{{/if}}">
+                <div class="image" style="background-image: url({{ data.image.src }}?h=800)"></div>
+                <div class="content">
+                    <h2 class="title">{{ data.title }}</h2>
+                    <p class="caption">{{ data.caption }}</p>
+                    <div class="cta"><a href="{{ data.linkHref }}">{{ data.linkText }}</a></div>
+                </div>
+            </div>
+            {{/each}}
+        </script>
+        <nav>
+            <a href="#prev" class="arrow prev">Prev image</a>
+            <a href="#next" class="next">Next image</a>
+        </nav>
+    </div>
+</section>
+<section id="carte">
+    <h1>Carte des pizzas</h1>
+    <div class="container">
+        <script type="text/x-handlebars-template+campsi"
+                data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/recipes/entries">
+            {{#each entries}}
+            <div class="pizza">
+                <div class="image">
+                    <img src="{{ data.image.src }}?w=328&h=300&fit=min" alt="{{ data.name }}">
+                </div>
+                <h2 class="name">{{ data.name }}</h2>
+                <p class="description">{{ data.description }}</p>
+                <div class="price">{{ data.price }}€</div>
+            </div>
+            {{/each}}
+            <div class="clear"></div>
+        </script>
+    </div>
+</section>
+<section id="equipe">
+    <h1>Notre équipe</h1>
+    <div class="container">
+        <script type="text/x-handlebars-template+campsi"
+                data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/staff/entries">
+            {{#each entries}}
+            <div class="member">
+                <div class="image">
+                    <img src="{{ data.image.src }}?w=200&h=200&fit=min" alt="{{data.name}}">
+                </div>
+                <h2 class="name">{{ data.name }}</h2>
+                <p class="title">{{ data.title }}</p>
+            </div>
+            {{/each}}
+            <div class="clear"></div>
+        </script>
+    </div>
+</section>
+<section id="services">
+    <h1>Nos services</h1>
+    <div class="container">
+        <script type="text/x-handlebars-template+campsi"
+                data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/services/entries">
+            <ul>
+                {{#each entries}}
+                <li><a class="{{#if @first}}active{{/if}}" href="#service_{{@key}}">{{ data.title }}</a></li>
+                {{/each}}
+            </ul>
+            <div class="services">
+                {{#each entries}}
+                <div class="service {{#if @first}}active{{/if}}" id="service_{{@key}}">
+                    <div class="image"><img src="{{ data.image.src }}?w=720&h=200&fit=crop" alt="{{data.title}}"></div>
+                    <div class="text">
+                        <h2 class="title">{{ data.title }}</h2>
+                        <p class="description">{{ data.description }}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="clear"></div>
+        </script>
+    </div>
+</section>
+<section id="nous-trouver">
+    <h1>Nous trouver</h1>
+</section>
+<script src="../../dist/campsi-sdk.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    (function () {
+        var $services = $('#services');
+        var $carousel = $('#carousel');
+
+        var selectedServiceIndex;
+        var $slides;
+        var activeSlideIndex;
+        var nextSlideIndex;
+
+        $services.on('click', 'li a', function () {
+            selectedServiceIndex = $(this).parent().index();
+            console.info(selectedServiceIndex);
+            $services.find('li a')
+                    .removeClass('active')
+                    .eq(selectedServiceIndex)
+                    .addClass('active');
+
+            $services.find('.services .service')
+                    .removeClass('active')
+                    .eq(selectedServiceIndex)
+                    .addClass('active');
+        });
+
+
+        $carousel.on('click', '.next', function () {
+            beforeSlide();
+            nextSlideIndex = (activeSlideIndex < ($slides.length - 1)) ? activeSlideIndex + 1 : 0;
+            moveSlide(nextSlideIndex);
+        }).on('click', '.prev', function () {
+            beforeSlide();
+            nextSlideIndex = activeSlideIndex > 0 ? activeSlideIndex - 1 : $slides.length - 1;
+            moveSlide(nextSlideIndex);
+        });
+
+        function beforeSlide() {
+            $slides = $carousel.find('.slide');
+            activeSlideIndex = $slides.filter('.active').index();
+        }
+
+        function moveSlide(activeIndex) {
+            $slides.removeClass('active prev next').each(function (i, slide) {
+                if (i < activeIndex) {
+                    $(slide).addClass('prev');
+                } else if (i > activeIndex) {
+                    $(slide).addClass('next');
+                } else {
+                    $(slide).addClass('active');
+                }
+            });
+        }
+    })();
+</script>
+</body>
+</html>

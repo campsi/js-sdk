@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/x-handlebars-template+campsi"
+        data-url="http://localhost:3000/api/v1/projects/boursorama/collections/Actualites/entries">
+    <div class="Actualites">
+        <h2>Actualités</h2>
+        {{#each entries}}
+        <div class="entry">
+            <div class="Hello">{{ data.Hello }}</div>
+            <div class="Titre">{{ data.Titre }}</div>
+            <div class="sub-form">
+                {{#if data.sub-form}}
+                <div class="pass">{{ data.sub-form.pass }}</div>
+                <div class="text">{{ data.sub-form.text }}</div>
+                {{/if}}
+            </div>
+            <div class="array-of-strings">
+                {{#each data.array-of-strings}}
+                {{ this }}
+                {{/each}}
+            </div>
+            <div class="Categorie">{{ data.Categorie }}</div>
+            <div class="nombre">{{ data.nombre }}</div>
+            <div class="Contenu">{{ data.Contenu }}</div>
+            <div class="Illustration"><img src="{{data.Illustration.uri}}"/></div>
+            <div class="List-of-strings">
+                {{#each data.List-of-strings}}
+                {{ this }}
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script src="../../dist/campsi-sdk.min.js"></script>
+</body>
+</html>
