@@ -50,11 +50,12 @@ body
 
         &.logo
           width 300px
+
   &.scroll
     > header nav
       background white
 section
-  padding 4em 0
+  padding 5em 0 3em 0
   border-bottom 10px solid darken($theme, 10)
   h1
     font-size 2em
@@ -235,3 +236,30 @@ section
       padding 1em
 #nous-trouver
   background darken($theme, 50)
+
+#evenements
+  background $theme
+  h2
+    color white
+    text-align center
+    margin-top -2em
+  .entry
+    display inline-block
+    padding 1.5em
+    background white
+    border-radius 1em
+    box-shadow 0 3px 10px rgba(0,0,0,0.2)
+    margin 1em
+  .Titre
+    font-size 1.5em
+    color black
+    margin-bottom .5em
+  .Date
+    float: right
+    color $theme
+  .Illustration
+    img
+      border 2px solid $theme
+      width 300px
+      margin-right 1em
+

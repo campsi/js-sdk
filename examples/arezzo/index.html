@@ -39,6 +39,21 @@
         </nav>
     </div>
 </section>
+<section id="evenements">
+<script type="text/x-handlebars-template+campsi"
+        data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/evenements/entries">
+<div class="evenements">
+    <h2>evenements</h2>
+    {{#each entries}}
+        <div class="entry">
+            <div class="Date">{{ data.Date }}</div>
+            <div class="Titre">{{ data.Titre }}</div>
+            <div class="Illustration"><img src="{{ data.Illustration.src }}"/></div>
+        </div>
+    {{/each}}
+</div>
+</script>
+</section>
 <section id="carte">
     <h1>Carte des pizzas</h1>
     <div class="container">
@@ -103,69 +118,10 @@
 </section>
 <section id="nous-trouver">
     <h1>Nous trouver</h1>
+
 </section>
 <script src="../../dist/campsi-sdk.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.2.min.js"
-        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-
-<script type="text/javascript">
-    (function () {
-        var $services = $('#services');
-        var $carousel = $('#carousel');
-
-        var selectedServiceIndex;
-        var $slides;
-        var activeSlideIndex;
-        var nextSlideIndex;
-
-        $services.on('click', 'li a', function () {
-            selectedServiceIndex = $(this).parent().index();
-            console.info(selectedServiceIndex);
-            $services.find('li a')
-                    .removeClass('active')
-                    .eq(selectedServiceIndex)
-                    .addClass('active');
-
-            $services.find('.services .service')
-                    .removeClass('active')
-                    .eq(selectedServiceIndex)
-                    .addClass('active');
-        });
-
-
-        $carousel.on('click', '.next', function () {
-            beforeSlide();
-            nextSlideIndex = (activeSlideIndex < ($slides.length - 1)) ? activeSlideIndex + 1 : 0;
-            moveSlide(nextSlideIndex);
-        }).on('click', '.prev', function () {
-            beforeSlide();
-            nextSlideIndex = activeSlideIndex > 0 ? activeSlideIndex - 1 : $slides.length - 1;
-            moveSlide(nextSlideIndex);
-        });
-
-        function beforeSlide() {
-            $slides = $carousel.find('.slide');
-            activeSlideIndex = $slides.filter('.active').index();
-        }
-
-        function moveSlide(activeIndex) {
-            $slides.removeClass('active prev next').each(function (i, slide) {
-                if (i < activeIndex) {
-                    $(slide).addClass('prev');
-                } else if (i > activeIndex) {
-                    $(slide).addClass('next');
-                } else {
-                    $(slide).addClass('active');
-                }
-            });
-        }
-
-        var $body = $('body');
-
-        $(window).on('scroll', function () {
-            $body.toggleClass('scroll', $(this).scrollTop() > 0);
-        });
-    })();
-</script>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

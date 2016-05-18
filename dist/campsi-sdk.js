@@ -19,7 +19,6 @@
             window.campsiTemplates.push(new Template(scripts[i], templateReady));
         }
     }
-
 })();
 },{"./src/template":50}],2:[function(require,module,exports){
 (function (process,__filename){
@@ -5305,6 +5304,9 @@ var currentQueue;
 var queueIndex = -1;
 
 function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
     draining = false;
     if (currentQueue.length) {
         queue = currentQueue.concat(queue);
@@ -8459,7 +8461,8 @@ Template.prototype.load = function (callback) {
 
     var request = GET(this.url, query, function (err, data) {
         if (!err) {
-            instance.entries = JSON.parse(data);
+            instance.entries = JSON.parse(data).entries;
+            console.info(instance.entries);
             instance.loaded = true;
             callback.call(instance);
         } else if (instance.fallback) {

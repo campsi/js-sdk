@@ -79,7 +79,8 @@ Template.prototype.load = function (callback) {
 
     var request = GET(this.url, query, function (err, data) {
         if (!err) {
-            instance.entries = JSON.parse(data);
+            instance.entries = JSON.parse(data).entries;
+            console.info(instance.entries);
             instance.loaded = true;
             callback.call(instance);
         } else if (instance.fallback) {

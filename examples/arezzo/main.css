@@ -196,7 +196,7 @@ body.scroll > header nav {
   background: #fff;
 }
 section {
-  padding: 4em 0;
+  padding: 5em 0 3em 0;
   border-bottom: 10px solid #de3530;
 }
 section h1 {
@@ -396,4 +396,34 @@ section .container {
 }
 #nous-trouver {
   background: #390a09;
+}
+#evenements {
+  background: #e5605c;
+}
+#evenements h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: -2em;
+}
+#evenements .entry {
+  display: inline-block;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  margin: 1em;
+}
+#evenements .Titre {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 0.5em;
+}
+#evenements .Date {
+  float: right;
+  color: #e5605c;
+}
+#evenements .Illustration img {
+  border: 2px solid #e5605c;
+  width: 300px;
+  margin-right: 1em;
 }
