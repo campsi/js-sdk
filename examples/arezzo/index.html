@@ -39,21 +39,6 @@
         </nav>
     </div>
 </section>
-<section id="evenements">
-<script type="text/x-handlebars-template+campsi"
-        data-url="https://www.campsi.io/api/v1/projects/campsi-demo-pizzeria/collections/evenements/entries">
-<div class="evenements">
-    <h2>evenements</h2>
-    {{#each entries}}
-        <div class="entry">
-            <div class="Date">{{ data.Date }}</div>
-            <div class="Titre">{{ data.Titre }}</div>
-            <div class="Illustration"><img src="{{ data.Illustration.src }}"/></div>
-        </div>
-    {{/each}}
-</div>
-</script>
-</section>
 <section id="carte">
     <h1>Carte des pizzas</h1>
     <div class="container">
